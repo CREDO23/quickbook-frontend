@@ -7,9 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint-next": "next lint",
-    "prettier" : "prettier src/**/*.{tsx,ts} --write",
-    "lint" : "eslint src/**/*.{tsx,ts}",
-    "lint-fix" : "eslint . src/**/*.{tsx,ts} --fix",
+    "prettier" : "prettier ./**/*.{tsx,ts} --write",
+    "lint" : "eslint ./**/*.{tsx,ts}",
+    "lint-fix" : "eslint . ./**/*.{tsx,ts} --fix",
     "precommit": "yarn lint-fix && yarn prettier",
     "prepush": "yarn lint && yarn lint-next",
     "prepare" : "husky install"
