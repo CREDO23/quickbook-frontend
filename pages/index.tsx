@@ -1,9 +1,10 @@
 import Layout from "./components/Layout";
+import {DatePicker} from 'antd'
 
 export default function Home(): JSX.Element {
-  return (
-    <Layout title={null}>
-      <div>hey</div>
-    </Layout>
-  );
+    return (
+        <Layout title={null}>
+            <DatePicker/>
+        </Layout>
+    );
 }
