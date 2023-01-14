@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Header from "./Header";
+import Footer from "./Footer";
 
 interface Props {
     children: JSX.Element[] | JSX.Element;
@@ -16,9 +18,9 @@ export default function Layout({ children, title }: Props): JSX.Element {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <header className=" bg-red-900 text-white">Header</header>
+            <Header/>
             <main>{children}</main>
-            <footer>Footer</footer>
+            <Footer/>
         </>
     );
 }
