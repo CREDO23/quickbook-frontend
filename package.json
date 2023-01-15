@@ -8,15 +8,14 @@
     "start": "next start",
     "lint-next": "next lint",
     "prettier": "prettier ./**/*.{tsx,ts} --write",
-    "lint": "eslint ./**/*.{tsx,ts}",
-    "lint-fix": "eslint . ./**/*.{tsx,ts} --fix",
+    "lint": "eslint ./**/*.{tsx,ts} --fix",
     "precommit": "yarn lint-fix && yarn prettier",
-    "prepush": "yarn lint && yarn lint-next",
     "prepare": "husky install"
   },
   "dependencies": {
     "@ant-design/icons": "^5.0.0",
     "@next/font": "13.1.1",
+    "@svgr/webpack": "^6.5.1",
     "antd": "^5.1.4",
     "eslint-config-next": "13.1.1",
     "next": "13.1.1",
