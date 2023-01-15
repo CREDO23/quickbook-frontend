@@ -27,7 +27,9 @@ export default function Layout({
             </Head>
             {showHeader && <Header />}
 
-            <main className="w-[100vw] h-[100vh] font-custom-family overflow-auto no-scrollbar">{children}</main>
+            <main className="w-[100vw] h-[100vh] font-custom-family overflow-auto no-scrollbar">
+                {children}
+            </main>
 
             {showFooter && <Footer />}
         </>

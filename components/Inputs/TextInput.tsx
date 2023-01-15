@@ -37,7 +37,7 @@ export default function TextInput({
                 className={`flex w-full h-10 border rounded ${
                     error ? "border-red-300" : ""
                 } items-center justify-between ${
-                    iconPosition == "left" ? "pr-2" : "pl-2"
+                    iconPosition == "left" ? "pr-4" : "pl-2"
                 } `}
             >
                 <Input
