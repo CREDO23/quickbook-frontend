@@ -1,15 +1,15 @@
 import Layout from "../components/Layouts";
 import TextInput from "../components/Inputs/TextInput";
 import PasswordInput from "../components/Inputs/PasswordInput";
-import Button from "../components/Buttons/Button";
 import { MailOutlined } from "@ant-design/icons";
+import Link from "next/link";
 
 export default function Login(): JSX.Element {
     return (
         <Layout title={"Login"}>
-            <div className="w-full bg-custom-gray-50 h-full flex flex-col md:flex-row items-center justify-center md:py-8 md:px-16">
-                <div className="h-full w-full md:w-7/12 bg-white rounded-l-xl md:p-8 flex flex-col gap-8 justify-center items-center">
-                    <h2 className="text-lg font-light  text-custom-yellow-900">
+            <div className="w-full  bg-custom-gray-50 h-full flex flex-col md:flex-row items-center justify-center md:py-8 md:px-16">
+                <div className="h-full  w-full md:w-7/12 bg-white rounded-l-xl md:p-8 flex flex-col gap-8 justify-center items-center">
+                    <h2 className="text-xl font-medium  text-custom-yellow-900">
                         Sing in to{" "}
                         <span className="text-2xl font-semibold">SPES</span>
                     </h2>
@@ -35,21 +35,12 @@ export default function Login(): JSX.Element {
                                 placeholder="Enter your password"
                             />
                         </div>
-                        <p className="text-custom-xs dec font-light  text-custom-yellow-900 cursor-pointer">
+                        <p className="text-custom-xs my-4 font-light  text-custom-yellow-900 cursor-pointer">
                             {" "}
                             Forgot password ?
                         </p>
                         <div className="w-11/12 md:w-1/2 flex flex-col gap-2">
-                            <Button
-                                style={{
-                                    background: "#F9A21D",
-                                    color: "white",
-                                    borderRadius: "2rem",
-                                    fontSize: "1rem",
-                                }}
-                                onClick={(e) => console.log(e)}
-                                name="Sing in"
-                            />
+                           <button className=" bg-custom-yellow-900 border border-custom-yellow-900 hover:bg-white hover:text-custom-yellow-900 hover:border-custom-yellow-900 transition text-white rounded-md py-2">Sing In</button>
                         </div>
                     </div>
                 </div>
@@ -62,19 +53,12 @@ export default function Login(): JSX.Element {
                         us .
                     </p>
                     <div className="w-1/2 flex flex-col gap-2">
-                        <Button
-                            type="outlined"
-                            style={{
-                                color: "white",
-                                border: "solid 1px #FCD89F",
-                                borderRadius: "2rem",
-                                fontSize: "1rem",
-                            }}
-                            onClick={(e) => console.log(e)}
-                            name="Sing up"
-                        />
+                       <Link className="w-full" href='/register'>
+                        <button className="border border-white py-1 w-full hover:text-custom-yellow-900 hover:bg-white transition-all rounded-md ">Sing Up</button>
+                       </Link> 
                     </div>
                 </div>
+                <p className="text-custom-xs my-3 text-custom-yellow-800 md:hidden font-light">Don&apos;t have an account ? <Link href='/register'><span className=" font-semibold">Sing Up</span></Link> </p>
             </div>
         </Layout>
     );

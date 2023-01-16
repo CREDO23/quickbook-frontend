@@ -38,6 +38,9 @@ module.exports = {
         'custom-2xl': ['1.5rem', '2rem'],
         'custom-3xl': ['1.87rem', '2.25rem'],
       },
+      backgroundImage : {
+        'login-bg' : "url('/public/login-bg.png')"
+      }
     },
   },
   plugins: [],
