@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-interface IButtonProps {
+export interface ButtonProps {
     disabled?: boolean;
     onClick: (e: any) => void;
     loading?: boolean;
