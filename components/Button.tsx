@@ -1,29 +1,33 @@
-import { FC } from "react";
-import { LoadingOutlined } from "@ant-design/icons";
+import { LoadingOutlined } from '@ant-design/icons';
+import React from 'react';
+import { FC } from 'react';
+import { ButtonProps } from '../types/button';
 
-const Button: FC<IButtonProps> = (props) => {
-    const {
-        disabled = false,
-        onClick ,
-        type = "default",
-        title,
-        fullWidth = false,
-        size = "big",
-        loading = false,
-        color = "primary",
-    } = props;
-    return (
-        <button
-            disabled={disabled}
-            onClick={onClick}
-            className={`${
-                fullWidth ? "w-full" : "w-60"
-            }  ${type} ${color} ${size == 'big' ? 'h-12' : size == 'medium' ? 'h-10' : size == 'small' ? 'h-8' : ''} ${color} button flex items-center justify-center gap-2 px-2 py-1`}
-        >
-                <span>{title}</span>
-                {loading && <LoadingOutlined />}
-        </button>
-    );
+const Button: FC<ButtonProps> = (props) => {
+  const {
+    disabled = false,
+    onClick,
+    title,
+    type = 'default',
+    loading = false,
+    color = 'primary',
+    fullWidth = false,
+    size = 'big',
+  } = props;
+  return (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={`${color} ${type} ${size} ${fullWidth ? 'w-full' : 'w-60'} ${
+        disabled ? 'disabled' : ''
+      } ${
+        size === 'big' ? 'h-12' : size === 'small' ? 'h-8' : size === 'medium' ? 'h-10' : ''
+      } flex justify-center items-center gap-3 button rounded m-1 px-8`}
+    >
+      {loading && <LoadingOutlined />}
+      <span className="font-semibold text-sm">{title}</span>
+    </button>
+  );
 };
 
 export default Button;

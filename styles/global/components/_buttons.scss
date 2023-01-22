@@ -17,13 +17,13 @@
     word-wrap: break-word;
 
     &:disabled {
-        background-color: #fafbfc;
+        background-color:var(--gray-600);
         border-color: rgba(27, 31, 35, 0.15);
         color: #959da5;
         cursor: default;
 
         &:hover {
-            background-color: #fafbfc;
+            background-color: var(--gray-600);
             border-color: rgba(27, 31, 35, 0.15);
             color: #959da5;
         }

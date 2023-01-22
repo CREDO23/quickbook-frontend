@@ -1,3 +1,3 @@
-export default function Header(): JSX.Element {
-    return <header>Header</header>;
+export default function Footer(): JSX.Element {
+    return <header>header</header>;
 }
