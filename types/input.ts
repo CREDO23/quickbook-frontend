@@ -9,13 +9,13 @@ export interface TextinputProps {
     placeholder?: string;
     showLabel?: boolean;
     icon?: ReactNode;
-    iconPosition?: 'right' | 'left';
+    iconPosition?: "right" | "left";
     type?: string;
     iconStyle?: string;
     onclick?: void;
-  }
+}
 
-export  interface SelectinputProps {
+export interface SelectinputProps {
     options: string[];
     onChange: ChangeEventHandler<HTMLSelectElement>;
     value?: any;

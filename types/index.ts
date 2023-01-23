@@ -1,10 +1,5 @@
-import type { ButtonProps } from './button';
-import type { CarouselProps } from './carousels';
-import type { TextinputProps, SelectinputProps } from './input';
+import type { ButtonProps } from "./button";
+import type { CarouselProps } from "./carousels";
+import type { TextinputProps, SelectinputProps } from "./input";
 
-export {
-  ButtonProps,
-  TextinputProps,
-  SelectinputProps,
-  CarouselProps,
-};
+export { ButtonProps, TextinputProps, SelectinputProps, CarouselProps };

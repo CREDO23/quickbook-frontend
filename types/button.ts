@@ -4,7 +4,7 @@ export interface ButtonProps {
     loading?: boolean;
     title: string;
     fullWidth?: boolean;
-    type?: 'default' | 'outlined' | 'link';
-    color?: 'primary' | 'secondary';
-    size?: 'big' | 'small' | 'medium';
-  }
+    type?: "default" | "outlined" | "link";
+    color?: "primary" | "secondary";
+    size?: "big" | "small" | "medium";
+}
