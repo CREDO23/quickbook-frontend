@@ -62,7 +62,23 @@ export default function TextInput({
                 </span>
             </div>
         );
-    } else {
+    }else if (type == "textarea") {
+            return <div
+            className={`flex w-full items-center border ${
+                disabled ? " bg-custom-gray-50" : ""
+            } rounded m-1 justify-between gap-1`}
+        >
+            <Input.TextArea
+                onChange={onChange}
+                value={value}
+                disabled={disabled}
+                allowClear={true}
+                bordered={false}
+                placeholder={placeholder}
+            />
+        </div>
+    }
+     else {
         return (
             <div
                 className={` flex m-1 flex-col w-full items-start justify-between gap-1  ${
