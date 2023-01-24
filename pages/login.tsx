@@ -10,7 +10,7 @@ export default function Login(): JSX.Element {
             <div className="w-full  bg-gray-500 h-full flex flex-col md:flex-row items-center justify-center md:py-8 md:px-16">
                 <div className="h-full  w-full md:w-7/12 bg-white rounded-l-xl md:p-8 flex flex-col gap-8 justify-center items-center">
                     <h2 className="text-xl font-medium  text-yellow-900">
-                       LOGIN to {' '}
+                        LOGIN to{" "}
                         <span className="text-2xl font-semibold">SPES</span>
                     </h2>
 
@@ -41,7 +41,7 @@ export default function Login(): JSX.Element {
                             Forgot password ?
                         </p>
                         <div className="w-11/12 md:w-1/2 flex flex-col gap-2">
-                        <Button
+                            <Button
                                 onClick={() => console.log("first")}
                                 title="LOGIN"
                                 fullWidth
@@ -50,18 +50,25 @@ export default function Login(): JSX.Element {
                     </div>
                 </div>
                 <div className="md:h-full hidden w-full md:flex flex-col items-center justify-center text-white gap-4 p-6 md:w-4/12 bg-blue-800 rounded-r-xl">
-                    <h2 className="text-3xl  text-yellow-900 font-bold">Hello, Friend !</h2>
+                    <h2 className="text-3xl  text-yellow-900 font-bold">
+                        Hello, Friend !
+                    </h2>
                     <p className="w-2/3  text-center ">
                         Enter your personnal details and start your journey with
                         us .
                     </p>
                     <div className="w-1/2 flex flex-col gap-2">
-                    <Link
-                        className="w-full  text-sm my-5 gap-1 flex items-center justify-center"
-                        href="/register"
-                    >
-                      <span className="text-gray-300 underline">Don&apos;t have an account ?</span>   <span className="  text-yellow-900 underline ">Register</span>   
-                    </Link>
+                        <Link
+                            className="w-full  text-sm my-5 gap-1 flex items-center justify-center"
+                            href="/register"
+                        >
+                            <span className="text-gray-300 underline">
+                                Don&apos;t have an account ?
+                            </span>{" "}
+                            <span className="  text-yellow-900 underline ">
+                                Register
+                            </span>
+                        </Link>
                     </div>
                 </div>
                 <p className="text-custom-xs my-3 text-yellow-800 md:hidden font-light">
