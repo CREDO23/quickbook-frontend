@@ -1,7 +1,5 @@
 import Layout from "../components/Layouts";
 import Link from "next/link";
-import EmailConfirmation from "../components/registerForms/EmailCOnfirmation";
-import {} from 'antd'
 import { OptionalInfosForm } from "../components/registerForms/OptionalInfos";
 
 export default function Login(): JSX.Element {
@@ -32,7 +30,7 @@ export default function Login(): JSX.Element {
                     <h2 className="text-xl font-medium  text-yellow-900">
                         REGISTER
                     </h2>
-                    <OptionalInfosForm/>
+                    <OptionalInfosForm />
                 </div>
                 <p className="text-xs my-3 text-yellow-800 md:hidden font-light">
                     <span>Alrady have an account ?</span>{" "}

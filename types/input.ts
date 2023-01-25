@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ChangeEventHandler, ReactNode } from "react";
 
 export interface TextinputProps {

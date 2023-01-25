@@ -51,7 +51,7 @@ export function OptionalInfosForm(): JSX.Element {
                     showLabel={true}
                     placeholder="Your description"
                 />
-                 <SelectInput
+                <SelectInput
                     label="Your country"
                     placeholder="Select your country"
                     onChange={(e) => {
@@ -59,7 +59,7 @@ export function OptionalInfosForm(): JSX.Element {
                     }}
                     options={["Male", "Female"]}
                 />
-                 <SelectInput
+                <SelectInput
                     label="Your City"
                     placeholder="Select your city"
                     onChange={(e) => {
