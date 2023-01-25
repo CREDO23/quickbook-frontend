@@ -2,7 +2,6 @@ import { UserOutlined } from "@ant-design/icons";
 import TextInput from "../Input";
 import SelectInput from "../SelectInput";
 
-
 export function OptionalInfosForm(): JSX.Element {
     return (
         <div className="flex  text-blue-900 flex-col items-center justify-around gap-2 w-full">
@@ -11,7 +10,7 @@ export function OptionalInfosForm(): JSX.Element {
                     onChange={(e) => {
                         console.log(e.target.value);
                     }}
-                    iconPosition="left"
+                    iconPosition="right"
                     icon={<UserOutlined />}
                     showLabel={true}
                     label="First Name"
@@ -21,7 +20,7 @@ export function OptionalInfosForm(): JSX.Element {
                     onChange={(e) => {
                         console.log(e.target.value);
                     }}
-                    iconPosition="left"
+                    iconPosition="right"
                     icon={<UserOutlined />}
                     showLabel={true}
                     label="Last Name"
@@ -48,10 +47,25 @@ export function OptionalInfosForm(): JSX.Element {
                     onChange={(e) => {
                         console.log(e.target.value);
                     }}
-                    iconPosition="left"
                     label={"Description"}
                     showLabel={true}
                     placeholder="Your description"
+                />
+                <SelectInput
+                    label="Your country"
+                    placeholder="Select your country"
+                    onChange={(e) => {
+                        console.log(e.target);
+                    }}
+                    options={["Male", "Female"]}
+                />
+                <SelectInput
+                    label="Your City"
+                    placeholder="Select your city"
+                    onChange={(e) => {
+                        console.log(e.target);
+                    }}
+                    options={["Male", "Female"]}
                 />
             </div>
         </div>

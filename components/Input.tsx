@@ -4,14 +4,15 @@ import React from "react";
 import { TextinputProps } from "../types/input";
 
 export default function TextInput({
-    disabled,
+    disabled = false,
     onChange,
     value,
     error,
     label,
     placeholder,
     icon,
-    iconPosition,
+    iconPosition = "left",
+    showLabel = true,
     type,
     onclick,
     iconStyle,
@@ -23,7 +24,7 @@ export default function TextInput({
                     disabled ? " bg-custom-gray-50 " : ""
                 }rounded `}
             >
-                <p className=" text-custom-gray-100">{label}</p>
+                {showLabel && <p className=" text-custom-gray-100">{label}</p>}
                 <div className="h-10 m-1 w-full p-2 border flex items-center justify-center rounded">
                     <Input.Password
                         value={value}
@@ -62,37 +63,48 @@ export default function TextInput({
                 </span>
             </div>
         );
-    }else if (type == "textarea") {
-            return <div
-            className={`flex w-full items-center border ${
-                disabled ? " bg-custom-gray-50" : ""
-            } rounded m-1 justify-between gap-1`}
-        >
-            <Input.TextArea
-                onChange={onChange}
-                value={value}
-                disabled={disabled}
-                allowClear={true}
-                bordered={false}
-                placeholder={placeholder}
-            />
-        </div>
-    }
-     else {
+    } else if (type == "textarea") {
         return (
             <div
                 className={` flex m-1 flex-col w-full items-start justify-between gap-1  ${
                     disabled ? " bg-custom-gray-50 " : ""
                 }rounded `}
             >
-                <p className=" text-custom-gray-100">{label}</p>
+                {showLabel && <p className=" text-custom-gray-100">{label}</p>}
+                <div
+                    className={`flex w-full border rounded ${
+                        error ? "border-red-300" : ""
+                    } items-center justify-between  `}
+                >
+                    <Input.TextArea
+                        onChange={onChange}
+                        value={value}
+                        disabled={disabled}
+                        bordered={false}
+                        placeholder={placeholder}
+                    />
+                </div>
 
+                {error && (
+                    <span className="text-custom-xs flex items-center gap-1 gap p-[2px] text-red-600">
+                        <ExclamationOutlined className="p-[1px] text-[8px] border border-red-600 rounded-full" />{" "}
+                        {error}
+                    </span>
+                )}
+            </div>
+        );
+    } else {
+        return (
+            <div
+                className={` flex m-1 flex-col w-full items-start justify-between ${
+                    disabled ? " bg-custom-gray-50 " : ""
+                }rounded `}
+            >
+                {showLabel && <p className=" text-custom-gray-100">{label}</p>}
                 <div
                     className={`flex w-full h-10 border rounded ${
                         error ? "border-red-300" : ""
-                    } items-center justify-between ${
-                        iconPosition == "left" ? "pr-2" : "pl-2"
-                    } `}
+                    } items-center justify-between `}
                 >
                     <Input
                         onChange={onChange}
@@ -101,13 +113,15 @@ export default function TextInput({
                         bordered={false}
                         placeholder={placeholder}
                     />
-                    <span
-                        className={`flex ${
-                            iconPosition == "left" ? "order-2" : "-order-1"
-                        } text-custom-gray-100 items-center justify-center`}
-                    >
-                        {icon}
-                    </span>
+                    {icon && (
+                        <span
+                            className={`flex ${
+                                iconPosition == "right" ? "order-2" : "-order-1"
+                            } text-custom-gray-100 mx-2 items-center justify-center`}
+                        >
+                            {icon}
+                        </span>
+                    )}
                 </div>
 
                 {error && (

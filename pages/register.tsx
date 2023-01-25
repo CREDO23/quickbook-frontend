@@ -1,6 +1,6 @@
 import Layout from "../components/Layouts";
 import Link from "next/link";
-
+import { OptionalInfosForm } from "../components/registerForms/OptionalInfos";
 
 export default function Login(): JSX.Element {
     return (
@@ -30,6 +30,7 @@ export default function Login(): JSX.Element {
                     <h2 className="text-xl font-medium  text-yellow-900">
                         REGISTER
                     </h2>
+                    <OptionalInfosForm />
                 </div>
                 <p className="text-xs my-3 text-yellow-800 md:hidden font-light">
                     <span>Alrady have an account ?</span>{" "}

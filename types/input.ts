@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ChangeEventHandler, ReactNode } from "react";
 
 export interface TextinputProps {
     disabled?: boolean;
-    onChange: ChangeEventHandler<HTMLInputElement> & ChangeEventHandler<HTMLTextAreaElement>;
+    onChange: ChangeEventHandler<HTMLInputElement> &
+        ChangeEventHandler<HTMLTextAreaElement>;
     value?: string;
     error?: string;
     label?: string;
@@ -20,7 +22,7 @@ export interface SelectinputProps {
     onChange: ChangeEventHandler<HTMLSelectElement>;
     value?: any;
     placeholder?: string;
-    label ?: string;
-    error ?: string;
-    disabled ?: boolean;
+    label?: string;
+    error?: string;
+    disabled?: boolean;
 }

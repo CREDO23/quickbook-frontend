@@ -10,7 +10,7 @@ export default function SelectInput({
     placeholder,
     label,
     disabled = false,
-    error 
+    error,
 }: SelectinputProps): JSX.Element {
     const opts: SelectProps["options"] = [];
 
@@ -36,36 +36,35 @@ export default function SelectInput({
         //     />
         // </div>
         <div
-                className={` flex m-1 flex-col w-full items-start justify-between gap-1  ${
-                    disabled ? " bg-custom-gray-50 " : ""
-                }rounded `}
+            className={` flex m-1 flex-col w-full items-start justify-between gap-1  ${
+                disabled ? " bg-custom-gray-50 " : ""
+            }rounded `}
+        >
+            <p className=" text-custom-gray-100">{label}</p>
+
+            <div
+                className={`flex w-full h-10 border rounded ${
+                    error ? "border-red" : ""
+                } items-center justify-between  `}
             >
-                <p className=" text-custom-gray-100">{label}</p>
-
-                <div
-                    className={`flex w-full h-10 border rounded ${
-                        error ? "border-red" : ""
-                    } items-center justify-between  `}
-                >
-                    <Select
-                value={value}
-                onChange={onChange}
-                placeholder={placeholder}
-                options={opts}
-                style={{
-                    width: "100%",
-                }}
-                bordered={false}
-            />
-                 
-                </div>
-
-                {error && (
-                    <span className="text-custom-xs flex items-center gap-1 gap p-[2px] text-red">
-                        <ExclamationOutlined className="p-[1px] text-[8px] border border-red rounded-full" />{" "}
-                        {error}
-                    </span>
-                )}
+                <Select
+                    value={value}
+                    onChange={onChange}
+                    placeholder={placeholder}
+                    options={opts}
+                    style={{
+                        width: "100%",
+                    }}
+                    bordered={false}
+                />
             </div>
+
+            {error && (
+                <span className="text-custom-xs flex items-center gap-1 gap p-[2px] text-red">
+                    <ExclamationOutlined className="p-[1px] text-[8px] border border-red rounded-full" />{" "}
+                    {error}
+                </span>
+            )}
+        </div>
     );
 }

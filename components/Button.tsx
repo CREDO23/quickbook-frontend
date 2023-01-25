@@ -11,6 +11,7 @@ const Button: FC<ButtonProps> = (props) => {
         type = "default",
         loading = false,
         color = "primary",
+        bgcolor = 'blue',
         fullWidth = false,
         size = "big",
     } = props;
@@ -18,7 +19,7 @@ const Button: FC<ButtonProps> = (props) => {
         <button
             onClick={onClick}
             disabled={disabled}
-            className={`${color} ${type} ${size} ${
+            className={`${color} ${bgcolor} ${type} ${size} ${
                 fullWidth ? "w-full" : "w-60"
             } ${disabled ? "disabled" : ""} ${
                 size === "big"

@@ -1,7 +1,6 @@
 import { UserOutlined, MailOutlined, PhoneOutlined } from "@ant-design/icons";
 import TextInput from "../Input";
 
-
 export default function RequiredInfosForm(): JSX.Element {
     return (
         <div className="flex  text-blue-900 flex-col items-center justify-around gap-2 w-full">
