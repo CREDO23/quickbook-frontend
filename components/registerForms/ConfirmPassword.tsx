@@ -1,4 +1,3 @@
-
 import TextInput from "../Input";
 
 export default function ConfirmPasswordForm(): JSX.Element {
