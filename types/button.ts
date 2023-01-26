@@ -7,6 +7,6 @@ export interface ButtonProps {
     fullWidth?: boolean;
     type?: "default" | "outlined" | "link";
     color?: "primary" | "secondary";
-    bgcolor? : 'blue' | 'yellow';
+    bgcolor?: "blue" | "yellow";
     size?: "big" | "small" | "medium";
 }

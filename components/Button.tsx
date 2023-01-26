@@ -11,7 +11,7 @@ const Button: FC<ButtonProps> = (props) => {
         type = "default",
         loading = false,
         color = "primary",
-        bgcolor = 'blue',
+        bgcolor = "blue",
         fullWidth = false,
         size = "big",
     } = props;
