@@ -4,9 +4,7 @@ interface Props {
     steps: { title: string; description: string; form: JSX.Element }[];
 }
 
-export default function RegisterStep({steps} : Props): JSX.Element {
-    
-
+export default function RegisterStep({ steps }: Props): JSX.Element {
     const items = steps.map((item) => ({
         key: item.title,
         title: item.title,

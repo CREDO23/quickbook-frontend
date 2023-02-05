@@ -1,12 +1,16 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-export interface ButtonProps {
+import { ReactNode } from "react";
+
+export interface BtnProps {
     disabled?: boolean;
+    block?: boolean;
+    danger?: boolean;
+    htmlType?: "button" | "submit" | "reset";
+    icon?: ReactNode;
+    ghost?: boolean;
+    shape?: "circle" | "round" | "default";
     onClick: (e: any) => void;
     loading?: boolean;
     title: string;
-    fullWidth?: boolean;
-    type?: "default" | "outlined" | "link";
-    color?: "primary" | "secondary";
-    bgcolor?: "blue" | "yellow";
-    size?: "big" | "small" | "medium";
+    type?: "primary" | "ghost" | "link" | "dashed" | "text" | "default";
+    size?: "large" | "small" | "middle";
 }
