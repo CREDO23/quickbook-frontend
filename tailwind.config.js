@@ -9,7 +9,8 @@ module.exports = {
         'blue-5' : '#5163C2',
         'blue-1' : '#B2BAE4',
         'white-1' : '#EDF3FE',
-        'yellow' : '#DF8B1A'
+        'yellow' : '#DF8B1A',
+        'red' : '#FE4D4F'
       },
       fontFamily: {
         'custom-family': 'Poppins , Sans Serif',
