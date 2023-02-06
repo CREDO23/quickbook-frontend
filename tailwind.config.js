@@ -5,11 +5,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'blue-10' : '#212886',
-        'blue-5' : '#5163C2',
-        'blue-1' : '#B2BAE4',
-        'white-1' : '#EDF3FE',
-        'yellow' : '#DF8B1A',
+        'blue-10' : '#0D244D',
+        'blue-8' : '#113066',
+        'blue-6' : '#143673',
+        'blue-4' : '#1E55B3',
+        'blue-2' : '#2973F2',
+        'yellow' : '#F2B705',
         'red' : '#FE4D4F'
       },
       fontFamily: {

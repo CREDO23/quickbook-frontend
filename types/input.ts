@@ -1,28 +1,26 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { ChangeEventHandler, ReactNode } from "react";
+import { ReactNode } from "react";
 
-export interface TextinputProps {
-    disabled?: boolean;
-    onChange: ChangeEventHandler<HTMLInputElement> &
-        ChangeEventHandler<HTMLTextAreaElement>;
+export interface InputProps {
+    placeholder?: string;
+    label? : string
     value?: string;
-    error?: string;
-    label?: string;
-    placeholder?: string;
-    showLabel?: boolean;
-    icon?: ReactNode;
-    iconPosition?: "right" | "left";
-    type?: string;
-    iconStyle?: string;
-    onclick?: void;
-}
-
-export interface SelectinputProps {
-    options: string[];
-    onChange: ChangeEventHandler<HTMLSelectElement>;
-    value?: any;
-    placeholder?: string;
-    label?: string;
-    error?: string;
+    onChange: (e: any) => void;
+    onPressEnter?: (e: any) => void;
+    addonAfter?: ReactNode;
+    addonBefore?: ReactNode;
+    allowClear?: boolean | { clearIcon?: ReactNode };
+    defaultValue?: string;
     disabled?: boolean;
+    maxLength?: number;
+    showCount?: boolean;
+    status?: "error" | "warning";
+    prefix?: ReactNode;
+    suffix?: ReactNode;
+    size?: "large" | "middle" | "small";
+    type?: "search" |  "password" | "text" | "textarea";
+    autoSize?: boolean | { minRows: number, maxRows: number };
+    onSearch?: (value: any, e: any) => void;
+    loading?: boolean;
+    showLabel?: boolean;
+    error? : string
 }
