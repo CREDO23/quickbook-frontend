@@ -19,7 +19,8 @@ export default function Button(props: BtnProps): JSX.Element {
 
     return (
         <Btn
-            // style={type == "primary" ? { background: "#212886" } : undefined}
+            className={`${type === 'primary' ? ' hover:opacity-90' : ''}`}
+            style={type === "primary" ? { background: "#2973F2" } : undefined}
             type={type}
             size={size}
             block={block}
