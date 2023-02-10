@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
             theme={{
                 token: {
                     colorPrimary: "#2973F2",
-                    colorError : "#FE4D4F"
+                    colorError: "#FE4D4F",
                 },
             }}
         >

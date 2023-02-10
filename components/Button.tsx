@@ -19,7 +19,7 @@ export default function Button(props: BtnProps): JSX.Element {
 
     return (
         <Btn
-            className={`${type === 'primary' ? ' hover:opacity-90' : ''} my-2`}
+            className={`${type === "primary" ? " hover:opacity-90" : ""} my-2`}
             style={type === "primary" ? { background: "#2973F2" } : undefined}
             type={type}
             size={size}

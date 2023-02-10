@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 export interface InputProps {
     placeholder?: string;
-    label? : string
+    label?: string;
     value?: string;
     onChange: (e: any) => void;
     onPressEnter?: (e: any) => void;
@@ -17,10 +17,10 @@ export interface InputProps {
     prefix?: ReactNode;
     suffix?: ReactNode;
     size?: "large" | "middle" | "small";
-    type?: "search" |  "password" | "text" | "textarea";
-    autoSize?: boolean | { minRows: number, maxRows: number };
+    type?: "search" | "password" | "text" | "textarea";
+    autoSize?: boolean | { minRows: number; maxRows: number };
     onSearch?: (value: any, e: any) => void;
     loading?: boolean;
     showLabel?: boolean;
-    error? : string
+    error?: string;
 }
