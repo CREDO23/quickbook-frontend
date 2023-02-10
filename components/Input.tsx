@@ -28,7 +28,7 @@ export default function Input(props: InputProps): JSX.Element {
         error
     } = props;
     return (
-        <div className="w-60 text-blue-10 m-1 flex flex-col justify-center gap-1">
+        <div className="w-full text-blue-10 m-1 flex flex-col justify-center gap-1">
             {showLabel && <p>{label}</p>}   
             {
                 type === 'text' &&  <Inpt
