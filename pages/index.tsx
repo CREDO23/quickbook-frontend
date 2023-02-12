@@ -14,6 +14,7 @@ export default function Home(): JSX.Element {
                     block
                     title="Envoyer"
                 />
+                <Input label="Username" onChange={() => {}}/>
             </div>
         </Layout>
     );
