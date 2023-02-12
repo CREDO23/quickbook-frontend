@@ -26,10 +26,11 @@ export default function Input(props: InputProps): JSX.Element {
         loading = false,
         showLabel = true,
         error,
+        labelColor = 'primary'
     } = props;
     return (
         <div className="w-full text-blue-10 m-1 flex flex-col justify-center gap-1">
-            {showLabel && <p>{label}</p>}
+            {showLabel && <p className={` ${labelColor == 'primary' ? ' text-blue-10' : labelColor == 'secondary' ? ' text-white' : ''}`}>{label}</p>}
             {type === "text" && (
                 <Inpt
                     placeholder={placeholder}

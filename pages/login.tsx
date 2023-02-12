@@ -15,6 +15,8 @@ export default function Login(): JSX.Element {
                 <form className="w-80 flex flex-col items-center gap-3">
                     <Input
                         size="large"
+                        label="Email"
+                        labelColor="secondary"
                         placeholder="Enter your email"
                         addonAfter={<MailOutlined className=" text-white" />}
                         onChange={() => {
@@ -24,6 +26,8 @@ export default function Login(): JSX.Element {
 
                     <Input
                         size="large"
+                        label="Password"
+                        labelColor="secondary"
                         type="password"
                         placeholder="Enter your password"
                         onChange={() => {
