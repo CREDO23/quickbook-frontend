@@ -1,18 +1,18 @@
-import Input from "../components/Input";
-import { MailOutlined } from "@ant-design/icons";
+
 import Button from "../components/Button";
 import { Steps } from "antd";
 import Account from "../components/registerForms/Account";
+import Link from "next/link";
 
 export default function Register(): JSX.Element {
     return (
-        <div className=" flex items-center  bg-blue-10 justify-center p-4 w-screen h-screen">
+        <div className=" flex items-center overflow-auto no-scrollbar  bg-blue-10 justify-center p-4 w-screen h-screen">
             <div className=" flex flex-col  items-center gap-6">
                 <div className="flex items-center flex-col gap-4 justify-center">
                     <h3 className=" text-white font-semibold text-3xl">
                         Welcome to <span className=" font-extrabold">SPES</span>{" "}
                     </h3>
-                    <p className="text-2xl font-light text-white">Register</p>
+                    <p className="text-xl font-light text-white">Register</p>
                 </div>
 
                 <div>
@@ -39,6 +39,7 @@ export default function Register(): JSX.Element {
                 </div>
 
                 <Account />
+            
                 <div className=" w-full flex items-center justify-between px-4">
                     <Button
                         type="primary"
@@ -57,6 +58,7 @@ export default function Register(): JSX.Element {
                 </div>
 
                 <div className="w-full flex items-center px-4 justify-center">
+                    <Link className=" w-full h-full" href='login'>
                     <Button
                         type="link"
                         block
@@ -65,6 +67,8 @@ export default function Register(): JSX.Element {
                             console.log("");
                         }}
                     />
+                    </Link>
+                    
                 </div>
             </div>
         </div>
