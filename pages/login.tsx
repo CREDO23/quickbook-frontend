@@ -3,6 +3,7 @@ import Image from "next/image";
 import Input from "../components/Input";
 import { MailOutlined } from "@ant-design/icons";
 import Button from "../components/Button";
+import Link from "next/link";
 
 export default function Login(): JSX.Element {
     return (
@@ -53,6 +54,7 @@ export default function Login(): JSX.Element {
                         }}
                     />{" "}
                     <span className=" border inline-block h-6 border-blue-2 w-[1px]"></span>{" "}
+                    <Link className=" w-full h-full" href='register'>
                     <Button
                         type="link"
                         block
@@ -61,6 +63,7 @@ export default function Login(): JSX.Element {
                             console.log("");
                         }}
                     />
+                    </Link>
                 </div>
             </div>
         </div>

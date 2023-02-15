@@ -24,4 +24,5 @@ export interface InputProps {
     showLabel?: boolean;
     error?: string;
     labelColor?: "primary" | "secondary";
+    required? : boolean
 }

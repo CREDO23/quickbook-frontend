@@ -27,6 +27,7 @@ export default function Input(props: InputProps): JSX.Element {
         showLabel = true,
         error,
         labelColor = "primary",
+        required = false
     } = props;
     return (
         <div className="w-full text-blue-10 m-1 flex flex-col justify-center gap-1">
@@ -45,6 +46,7 @@ export default function Input(props: InputProps): JSX.Element {
             )}
             {type === "text" && (
                 <Inpt
+                    required={required}
                     placeholder={placeholder}
                     value={value}
                     defaultValue={defaultValue}
