@@ -23,5 +23,5 @@ export interface InputProps {
     loading?: boolean;
     showLabel?: boolean;
     error?: string;
-    labelColor ? : 'primary' | 'secondary'
+    labelColor?: "primary" | "secondary";
 }
