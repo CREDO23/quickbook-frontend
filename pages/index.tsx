@@ -1,20 +1,12 @@
-import Input from "../components/Input";
-import Button from "../components/Button";
+
 import Layout from "../components/Layouts";
-import { FrownOutlined } from "@ant-design/icons";
 
 export default function Home(): JSX.Element {
     return (
         <Layout title={null}>
-            <p>Home</p>
-            <div className="w-80 mx-80">
-                <Button
-                    onClick={() => console.log("")}
-                    type="primary"
-                    block
-                    title="Envoyer"
-                />
-                <Input label="Username" onChange={() => {}}/>
+            <div className=" flex items-center justify-center w-full h-full">
+            <h3  className=" font-bold text-4xl text-blue-2  font-">QUICKBOOK</h3>
+
             </div>
         </Layout>
     );
