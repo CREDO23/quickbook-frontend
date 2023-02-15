@@ -27,7 +27,7 @@ export default function Input(props: InputProps): JSX.Element {
         showLabel = true,
         error,
         labelColor = "primary",
-        required = false
+        required = false,
     } = props;
     return (
         <div className="w-full text-blue-10 m-1 flex flex-col justify-center gap-1">

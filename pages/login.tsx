@@ -54,15 +54,15 @@ export default function Login(): JSX.Element {
                         }}
                     />{" "}
                     <span className=" border inline-block h-6 border-blue-2 w-[1px]"></span>{" "}
-                    <Link className=" w-full h-full" href='register'>
-                    <Button
-                        type="link"
-                        block
-                        title="Register"
-                        onClick={() => {
-                            console.log("");
-                        }}
-                    />
+                    <Link className=" w-full h-full" href="register">
+                        <Button
+                            type="link"
+                            block
+                            title="Register"
+                            onClick={() => {
+                                console.log("");
+                            }}
+                        />
                     </Link>
                 </div>
             </div>

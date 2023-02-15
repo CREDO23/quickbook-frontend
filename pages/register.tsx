@@ -1,10 +1,43 @@
-
 import Button from "../components/Button";
 import { Steps } from "antd";
 import Account from "../components/registerForms/Account";
 import Link from "next/link";
+import Password from "../components/registerForms/Password";
+import RequiredInfo from "../components/registerForms/RequiredInfo";
+import OptionalInfo from "../components/registerForms/OptionalInfo";
+import UploadProfil from "../components/registerForms/UploadProfil";
+import { useState } from "react";
+
 
 export default function Register(): JSX.Element {
+    const registerForms = [
+        {
+            form : <Account/>
+        } ,
+        {
+            form : <RequiredInfo/>
+        },
+        {
+            form : <OptionalInfo/>
+        },
+        {
+            form : <UploadProfil/>
+        },
+        {
+            form : <Password/>
+        }
+    ]
+
+    const [currentStep , setCurrentStep] = useState(0)
+
+    const handleNext = () => {
+        setCurrentStep(currentStep + 1)
+    }
+
+    const handlePrev = () => {
+        setCurrentStep(currentStep - 1)
+    }
+
     return (
         <div className=" flex items-center overflow-auto no-scrollbar  bg-blue-10 justify-center p-4 w-screen h-screen">
             <div className=" flex flex-col  items-center gap-6">
@@ -20,10 +53,11 @@ export default function Register(): JSX.Element {
                         type="inline"
                         size="small"
                         progressDot
-                        current={0}
+                        current={currentStep}
                         items={[
                             {
                                 description: "Step1",
+                                
                             },
                             {
                                 description: "Step 2",
@@ -34,41 +68,44 @@ export default function Register(): JSX.Element {
                             {
                                 description: "Step 4",
                             },
+                            {
+                                description: "Step 5",
+                            },
                         ]}
                     />
                 </div>
-
-                <Account />
-            
+                {
+                    registerForms[currentStep]?.form
+                }
                 <div className=" w-full flex items-center justify-between px-4">
                     <Button
                         type="primary"
                         title="Prev"
                         onClick={() => {
-                            console.log("");
+                           handlePrev()
                         }}
+                        
                     />
                     <Button
                         type="primary"
                         title="Next"
                         onClick={() => {
-                            console.log("");
+                            handleNext()
                         }}
                     />
                 </div>
 
                 <div className="w-full flex items-center px-4 justify-center">
-                    <Link className=" w-full h-full" href='login'>
-                    <Button
-                        type="link"
-                        block
-                        title="Login"
-                        onClick={() => {
-                            console.log("");
-                        }}
-                    />
+                    <Link className=" w-full h-full" href="login">
+                        <Button
+                            type="link"
+                            block
+                            title="Login"
+                            onClick={() => {
+                                console.log("");
+                            }}
+                        />
                     </Link>
-                    
                 </div>
             </div>
         </div>
