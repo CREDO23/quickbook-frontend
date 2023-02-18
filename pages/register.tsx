@@ -7,36 +7,36 @@ import RequiredInfo from "../components/registerForms/RequiredInfo";
 import OptionalInfo from "../components/registerForms/OptionalInfo";
 import UploadProfil from "../components/registerForms/UploadProfil";
 import { useState } from "react";
-
+import ConfirmEmail from "../components/registerForms/ConfirmEmail";
 
 export default function Register(): JSX.Element {
     const registerForms = [
         {
-            form : <Account/>
-        } ,
-        {
-            form : <RequiredInfo/>
+            form: <Account />,
         },
         {
-            form : <OptionalInfo/>
+            form: <RequiredInfo />,
         },
         {
-            form : <UploadProfil/>
+            form: <OptionalInfo />,
         },
         {
-            form : <Password/>
-        }
-    ]
+            form: <UploadProfil />,
+        },
+        {
+            form: <Password />,
+        },
+    ];
 
-    const [currentStep , setCurrentStep] = useState(0)
+    const [currentStep, setCurrentStep] = useState(0);
 
     const handleNext = () => {
-        setCurrentStep(currentStep + 1)
-    }
+        setCurrentStep(currentStep + 1);
+    };
 
     const handlePrev = () => {
-        setCurrentStep(currentStep - 1)
-    }
+        setCurrentStep(currentStep - 1);
+    };
 
     return (
         <div className=" flex items-center overflow-auto no-scrollbar  bg-blue-10 justify-center p-4 w-screen h-screen">
@@ -57,7 +57,6 @@ export default function Register(): JSX.Element {
                         items={[
                             {
                                 description: "Step1",
-                                
                             },
                             {
                                 description: "Step 2",
@@ -74,23 +73,21 @@ export default function Register(): JSX.Element {
                         ]}
                     />
                 </div>
-                {
-                    registerForms[currentStep]?.form
-                }
+                {/* {registerForms[currentStep]?.form} */}
+                <ConfirmEmail/>
                 <div className=" w-full flex items-center justify-between px-4">
                     <Button
                         type="primary"
                         title="Prev"
                         onClick={() => {
-                           handlePrev()
+                            handlePrev();
                         }}
-                        
                     />
                     <Button
                         type="primary"
                         title="Next"
                         onClick={() => {
-                            handleNext()
+                            handleNext();
                         }}
                     />
                 </div>
