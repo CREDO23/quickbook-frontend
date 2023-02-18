@@ -7,9 +7,9 @@ export default function UploadProfil(): JSX.Element {
     return (
         <div className=" flex flex-col gap-4 p-4  w-full items-center justify-center">
             <div className=" w-full">
-            <p className=" text-white">Upload your profil</p>
+                <p className=" text-white">Upload your profil</p>
             </div>
-            
+
             <div className=" border border-gray-400 flex items-center justify-center rounded-full p-2 w-40 h-40">
                 {url ? (
                     <Image
@@ -23,20 +23,17 @@ export default function UploadProfil(): JSX.Element {
                     <p className=" text-gray-500">No data</p>
                 )}
             </div>
-            {
-                !url && <div className="w-24 rounded border-dashed cursor-pointer border overflow-hidden">
-                <input
-                    onChange={() => {
-                        setUrl(
-                            ""
-                        );
-                    }}
-                    type="file"
-                    className=" file:bg-transparent file:border-none file:text-white"
-                />
-            </div>
-            }
-            
+            {!url && (
+                <div className="w-24 rounded border-dashed cursor-pointer border overflow-hidden">
+                    <input
+                        onChange={() => {
+                            setUrl("");
+                        }}
+                        type="file"
+                        className=" file:bg-transparent file:border-none file:text-white"
+                    />
+                </div>
+            )}
         </div>
     );
 }
