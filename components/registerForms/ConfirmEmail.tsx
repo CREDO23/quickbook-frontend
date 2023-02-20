@@ -11,6 +11,13 @@ export default function ConfirmEmail(): JSX.Element {
 
     useEffect(() => {
       inputs[currenntindex].current?.focus();
+
+      inputs.forEach(input =>{
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-ignore
+        input.current?.setAttribute('maxlength' , 1 )
+
+      } )
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
@@ -25,17 +32,25 @@ export default function ConfirmEmail(): JSX.Element {
                 inputs[currenntindex]?.current?.focus()
 
             }
-      
+    
     }
 
     const handleNavigate = (e : React.KeyboardEvent<HTMLInputElement>  ,inputs : MutableRefObject<HTMLInputElement | null>[]) => {
+
       if(e.key == "ArrowLeft"){
+
             currenntindex --
             inputs[currenntindex]?.current?.focus()
+            setTimeout(() => inputs[currenntindex]?.current?.select() , 100)
+            // inputs[currenntindex]?.current?.select()
+        
       }else if(e.key == "ArrowRight"){
+
             currenntindex ++
             inputs[currenntindex]?.current?.focus()
-      }else{
+            setTimeout(() => inputs[currenntindex]?.current?.select() , 100)
+            // inputs[currenntindex]?.current?.select()
+            
 
       }
     }
