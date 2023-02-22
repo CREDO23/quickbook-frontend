@@ -26,6 +26,9 @@ export default function Register(): JSX.Element {
         {
             form: <Password />,
         },
+        {
+            form: <ConfirmEmail />,
+        },
     ];
 
     const [currentStep, setCurrentStep] = useState(0);
@@ -40,7 +43,7 @@ export default function Register(): JSX.Element {
 
     return (
         <div className=" flex items-center overflow-auto no-scrollbar  bg-blue-10 justify-center p-4 w-screen h-screen">
-            <div className=" flex flex-col  items-center gap-6">
+            <div className=" flex flex-col  items-center gap-2">
                 <div className="flex items-center flex-col gap-4 justify-center">
                     <h3 className=" text-white font-semibold text-3xl">
                         Welcome to <span className=" font-extrabold">SPES</span>{" "}
@@ -73,30 +76,79 @@ export default function Register(): JSX.Element {
                         ]}
                     />
                 </div>
-                {/* {registerForms[currentStep]?.form} */}
-                <ConfirmEmail/>
-                <div className=" w-full flex items-center justify-between px-4">
-                    <Button
-                        type="primary"
-                        title="Prev"
-                        onClick={() => {
-                            handlePrev();
-                        }}
-                    />
-                    <Button
-                        type="primary"
-                        title="Next"
-                        onClick={() => {
-                            handleNext();
-                        }}
-                    />
+                {registerForms[currentStep]?.form}
+                <div
+                    className={` w-full flex items-center ${
+                        currentStep <= 3
+                            ? " justify-between"
+                            : " justify-center"
+                    }`}
+                >
+                    {currentStep <= 3 ? (
+                        <>
+                            <Button
+                                type="primary"
+                                title="Prev"
+                                onClick={() => {
+                                    if (currentStep > 0) {
+                                        handlePrev();
+                                    }
+                                }}
+                            />
+                            <Button
+                                type="primary"
+                                title="Next"
+                                onClick={() => {
+                                    if (
+                                        currentStep <
+                                        registerForms.length - 1
+                                    ) {
+                                        handleNext();
+                                    }
+                                }}
+                            />
+                        </>
+                    ) : currentStep == 5 ? (
+                        <div className=" my-3">
+                            <Button
+                                type="primary"
+                                title="Send"
+                                onClick={() => {
+                                    if (
+                                        currentStep <
+                                        registerForms.length - 1
+                                    ) {
+                                        handleNext();
+                                    }
+                                }}
+                            />
+                        </div>
+                    ) : (
+                        <>
+                            <Button
+                                type="primary"
+                                title="REGISTER"
+                                block
+                                onClick={() => {
+                                    if (
+                                        currentStep <
+                                        registerForms.length - 1
+                                    ) {
+                                        handleNext();
+                                    }
+                                }}
+                            />
+                        </>
+                    )}
                 </div>
 
                 <div className="w-full flex items-center px-4 justify-center">
-                    <Link className=" w-full h-full" href="login">
+                    <Link
+                        className=" w-full flex items-center justify-center h-full"
+                        href="login"
+                    >
                         <Button
                             type="link"
-                            block
                             title="Login"
                             onClick={() => {
                                 console.log("");
