@@ -8,14 +8,13 @@ import Link from "next/link";
 export default function Login(): JSX.Element {
     return (
         <div className=" flex items-center  bg-blue-10 justify-center p-4 w-screen h-screen">
-            <div className=" flex flex-col  items-center gap-6">
+            <div className=" flex flex-col  items-center gap-4">
                 <div className="flex items-center justify-center h-40 w-40">
                     <Image className="w-full h-full" alt="logo" src={logo} />
                 </div>
                 <p className="text-2xl font-light text-white">Sing In</p>
                 <form className="w-80 flex flex-col items-center gap-3">
                     <Input
-                        size="large"
                         label="Email"
                         labelColor="secondary"
                         placeholder="Enter your email"
@@ -26,7 +25,6 @@ export default function Login(): JSX.Element {
                     />
 
                     <Input
-                        size="large"
                         label="Password"
                         labelColor="secondary"
                         type="password"

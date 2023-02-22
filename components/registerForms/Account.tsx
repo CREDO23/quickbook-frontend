@@ -15,7 +15,7 @@ export default function Account(): JSX.Element {
                         account == "personnal"
                             ? "border-blue-2 text-blue-2"
                             : "border-white text-white"
-                    } hover:border-blue-2 transition-all  rounded-lg border cursor-pointer  w-full h-20 flex items-center justify-center`}
+                    } hover:border-blue-2 transition-all  rounded-lg border cursor-pointer  w-full h-[5rem] flex items-center justify-center`}
                 >
                     <p className=" text-2xl font-semibold ">Personnal</p>
                 </div>
@@ -25,7 +25,7 @@ export default function Account(): JSX.Element {
                         account == "company"
                             ? "border-blue-2 text-blue-2"
                             : "border-white text-white"
-                    } hover:border-blue-2  transition-all  rounded-lg border cursor-pointer w-full h-20 flex items-center justify-center`}
+                    } hover:border-blue-2  transition-all  rounded-lg border cursor-pointer w-full h-[5rem] flex items-center justify-center`}
                 >
                     <p className=" text-2xl font-semibold">Company</p>
                 </div>

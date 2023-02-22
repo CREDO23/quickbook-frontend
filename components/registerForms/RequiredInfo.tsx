@@ -6,7 +6,6 @@ export default function RequiredInfo(): JSX.Element {
         <form className="w-80 flex flex-col items-center gap-3">
             <Input
                 required
-                size="large"
                 label="Username"
                 labelColor="secondary"
                 placeholder="Enter your username"
@@ -18,7 +17,6 @@ export default function RequiredInfo(): JSX.Element {
 
             <Input
                 required
-                size="large"
                 label="Email"
                 addonAfter={<MailOutlined className=" text-white" />}
                 labelColor="secondary"
@@ -30,7 +28,6 @@ export default function RequiredInfo(): JSX.Element {
 
             <Input
                 required
-                size="large"
                 label="Phone Number"
                 labelColor="secondary"
                 placeholder="Enter your phone number"
