@@ -77,7 +77,13 @@ export default function Register(): JSX.Element {
                     />
                 </div>
                 {registerForms[currentStep]?.form}
-                <div className={` w-full flex items-center ${currentStep <= 3 ? ' justify-between' : ' justify-center'}`}>
+                <div
+                    className={` w-full flex items-center ${
+                        currentStep <= 3
+                            ? " justify-between"
+                            : " justify-center"
+                    }`}
+                >
                     {currentStep <= 3 ? (
                         <>
                             <Button
@@ -107,7 +113,6 @@ export default function Register(): JSX.Element {
                             <Button
                                 type="primary"
                                 title="Send"
-                                
                                 onClick={() => {
                                     if (
                                         currentStep <
