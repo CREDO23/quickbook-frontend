@@ -7,8 +7,9 @@ import Link from "next/link";
 
 export default function Login(): JSX.Element {
     return (
-        <div className=" flex items-center  bg-blue-10 justify-center p-4 w-screen h-screen">
-            <div className=" flex flex-col  items-center gap-4">
+        <div className=" flex items-center  relative bg-[url(../public/bg-auth.jpeg)] p-4 w-screen h-screen">
+            <div className=" h-full w-full absolute top-0 left-0 bg-gradient-to-r  from-blue-10 via-blue-10 to-transparent"></div>
+            <div className="w-1/2 h-full justify-center z-10 flex flex-col  items-center gap-4">
                 <div className="flex items-center justify-center h-40 w-40">
                     <Image className="w-full h-full" alt="logo" src={logo} />
                 </div>
@@ -34,6 +35,7 @@ export default function Login(): JSX.Element {
                         }}
                     />
                 </form>
+                <div className="w-60">
                 <Button
                     type="primary"
                     block
@@ -42,7 +44,9 @@ export default function Login(): JSX.Element {
                         console.log("");
                     }}
                 />
-                <div className="w-full flex items-center px-4 justify-between">
+                </div>
+                
+                <div className=" flex items-center gap-2 px-4 justify-between">
                     <Button
                         type="link"
                         block

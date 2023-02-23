@@ -42,8 +42,9 @@ export default function Register(): JSX.Element {
     };
 
     return (
-        <div className=" flex items-center overflow-auto no-scrollbar  bg-blue-10 justify-center p-4 w-screen h-screen">
-            <div className=" flex flex-col  items-center gap-2">
+        <div className=" flex items-center overflow-auto no-scrollbar  bg-[url(../public/bg-auth.jpeg)] p-4 w-screen h-screen">
+             <div className=" h-full w-full absolute top-0 left-0 bg-gradient-to-r  from-blue-10 via-blue-10 to-transparent"></div>
+            <div className=" h-full w-1/2 justify-center z-10 flex flex-col  items-center gap-2">
                 <div className="flex items-center flex-col gap-4 justify-center">
                     <h3 className=" text-white font-semibold text-3xl">
                         Welcome to <span className=" font-extrabold">SPES</span>{" "}
@@ -78,7 +79,7 @@ export default function Register(): JSX.Element {
                 </div>
                 {registerForms[currentStep]?.form}
                 <div
-                    className={` w-full flex items-center ${
+                    className={` w-80 flex items-center ${
                         currentStep <= 3
                             ? " justify-between"
                             : " justify-center"
