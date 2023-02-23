@@ -5,7 +5,7 @@ export default function UploadProfil(): JSX.Element {
     const [url, setUrl] = useState("");
 
     return (
-        <div className=" flex flex-col gap-4 p-4  w-full items-center justify-center">
+        <div className=" w-80 flex flex-col gap-4 p-4  items-center justify-center">
             <div className=" w-full">
                 <p className=" text-white">Upload your profil</p>
             </div>
