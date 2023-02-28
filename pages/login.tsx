@@ -9,11 +9,12 @@ export default function Login(): JSX.Element {
     return (
         <div className=" flex items-center  relative bg-[url(../public/bg-auth.jpeg)] p-4 w-screen h-screen">
             <div className=" h-full w-full absolute top-0 left-0 bg-gradient-to-r  from-blue-10 via-blue-10 to-transparent"></div>
-            <div className="w-1/2 h-full justify-center z-10 flex flex-col  items-center gap-4">
+        
+            <div className="w-1/2 max-[640px]:w-full h-full justify-center z-10 flex flex-col  items-center gap-4">
                 <div className="flex items-center justify-center h-40 w-40">
                     <Image className="w-full h-full" alt="logo" src={logo} />
                 </div>
-                <p className="text-2xl font-light text-white">Sing In</p>
+                <p className="text-xl font-semibold text-yellow">Sing In</p>
                 <form className="w-80 flex flex-col items-center gap-3">
                     <Input
                         label="Email"
@@ -35,17 +36,17 @@ export default function Login(): JSX.Element {
                         }}
                     />
                 </form>
-                <div className="w-60">
-                <Button
-                    type="primary"
-                    block
-                    title="LOGIN"
-                    onClick={() => {
-                        console.log("");
-                    }}
-                />
+                <div className="w-80">
+                    <Button
+                        type="primary"
+                        block
+                        title="LOGIN"
+                        onClick={() => {
+                            console.log("");
+                        }}
+                    />
                 </div>
-                
+
                 <div className=" flex items-center gap-2 px-4 justify-between">
                     <Button
                         type="link"
