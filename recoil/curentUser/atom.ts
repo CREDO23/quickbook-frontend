@@ -1,13 +1,12 @@
-import {atom} from  'recoil'
+import { atom } from "recoil";
 
 const currentUserAtom = atom({
-    key : 'currentUser', 
+    key: "currentUser",
 
-    default : {
-        user :  localStorage.getItem('user'),
-        accessToken : localStorage.getItem('accessToken'),
-    }
-})
+    default: {
+        user: localStorage.getItem("user"),
+        accessToken: localStorage.getItem("accessToken"),
+    },
+});
 
-
-export default currentUserAtom
+export default currentUserAtom;

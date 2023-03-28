@@ -1,7 +1,7 @@
-import atom from './atom'
-import userInfo from './userInfo'
-import accessToken from './accessToken'
+import atom from "./atom";
+import userInfo from "./userInfo";
+import accessToken from "./accessToken";
 
-export {userInfo , accessToken}
+export { userInfo, accessToken };
 
-export default atom
+export default atom;

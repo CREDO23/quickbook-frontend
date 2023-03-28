@@ -7,18 +7,17 @@ import Link from "next/link";
 import { ChangeEvent, useState } from "react";
 
 export default function Login(): JSX.Element {
+    const [loginForm, setLoginForm] = useState({
+        email: "",
+        password: "",
+    });
 
-    const [loginForm , setLoginForm] = useState({
-        email : '',
-        password : '',
-    })
-
-    const handleChange = (e : ChangeEvent<HTMLInputElement> , target : string) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement>, target: string) => {
         setLoginForm({
-          ...loginForm,
-            [target] : e.target.value
-        })
-    }
+            ...loginForm,
+            [target]: e.target.value,
+        });
+    };
 
     return (
         <div className=" flex items-center  relative bg-[url(../public/bg-auth.jpeg)] p-4 w-screen h-screen">
@@ -36,7 +35,7 @@ export default function Login(): JSX.Element {
                         placeholder="Enter your email"
                         addonAfter={<MailOutlined className=" text-white" />}
                         onChange={(e) => {
-                          handleChange(e , 'email')
+                            handleChange(e, "email");
                         }}
                     />
 
@@ -46,7 +45,7 @@ export default function Login(): JSX.Element {
                         type="password"
                         placeholder="Enter your password"
                         onChange={(e) => {
-                            handleChange(e , 'password')
+                            handleChange(e, "password");
                         }}
                     />
                 </form>

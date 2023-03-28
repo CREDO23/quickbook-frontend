@@ -2,7 +2,7 @@ import Button from "../components/Button";
 import Input from "../components/Input";
 import Link from "next/link";
 import { UserOutlined, MailOutlined } from "@ant-design/icons";
-import { Alert} from "antd";
+import { Alert } from "antd";
 import { ChangeEvent, useState } from "react";
 
 export default function Register(): JSX.Element {
@@ -28,7 +28,6 @@ export default function Register(): JSX.Element {
     //Hnadle Validaton
 
     const handleValidation = (): Promise<string | boolean> => {
-
         const isFilled = Object.values(registerForm).every((input) => input);
 
         const isEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(
@@ -49,9 +48,8 @@ export default function Register(): JSX.Element {
                 reject("Password mismatch");
             } else if (charLengthPassword < 6) {
                 reject("Password must be at least 6 characters");
-            }else{
-
-            resolve(true);
+            } else {
+                resolve(true);
             }
         });
     };
@@ -59,20 +57,19 @@ export default function Register(): JSX.Element {
     //Hnandle Submit
 
     const handleSubmit = async () => {
-
         try {
-         await handleValidation();
-     
+            await handleValidation();
+
             //TODO connect to API
 
-            setAlertMessage('')
+            setAlertMessage("");
         } catch (error) {
-            setAlertMessage(error as string)
+            setAlertMessage(error as string);
         }
     };
 
     //Alert
-    const [alertMessage , setAlertMessage] = useState<string>('')
+    const [alertMessage, setAlertMessage] = useState<string>("");
 
     return (
         <div className=" flex items-center overflow-auto no-scrollbar  bg-[url(../public/bg-auth.jpeg)] p-4 w-screen h-screen">
@@ -87,20 +84,20 @@ export default function Register(): JSX.Element {
                     </h3>
                     <p className="text-xl  text-yellow">Register</p>
                 </div>
-                <div className='w-80'>
-                    {
-                        alertMessage && <Alert
-                        className="w-full"
-                        message={alertMessage}
-                        type="error"
-                        closable
-                        onClose={() =>{
-                             setAlertMessage('')
-                        } }
-                    />
-                    }
+                <div className="w-80">
+                    {alertMessage && (
+                        <Alert
+                            className="w-full"
+                            message={alertMessage}
+                            type="error"
+                            closable
+                            onClose={() => {
+                                setAlertMessage("");
+                            }}
+                        />
+                    )}
                 </div>
-                <form  className="w-80 flex flex-col items-center gap-3">
+                <form className="w-80 flex flex-col items-center gap-3">
                     <Input
                         required
                         label="Username"
@@ -149,12 +146,12 @@ export default function Register(): JSX.Element {
                         block
                         title="REGISTER"
                         onClick={() => {
-                            handleSubmit()
+                            handleSubmit();
                             console.log("");
                         }}
                     />
                 </div>
-                
+
                 <div className="w-full flex items-center px-4 justify-center">
                     <Link
                         className=" w-full flex items-center justify-center h-full"
