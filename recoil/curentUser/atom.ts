@@ -5,7 +5,7 @@ const currentUserAtom = atom({
 
     default: {
         user: localStorage.getItem("user"),
-        accessToken: localStorage.getItem("accessToken"),
+        accessToken: localStorage.getItem("access_token"),
     },
 });
 
